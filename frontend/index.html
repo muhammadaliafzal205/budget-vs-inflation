@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Budget vs. Inflation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Did the budget outrun inflation?</h1>
+    <p class="subtitle">
+      Pick a US federal agency. For each fiscal year: was its budget growing faster than
+      inflation, and how much of what it was given did it actually spend?
+    </p>
+
+    <div class="controls">
+      <label for="agency-select">Agency</label>
+      <select id="agency-select">
+        <option value="">Loading agencies…</option>
+      </select>
+    </div>
+
+    <div id="stale-banner" class="banner hidden"></div>
+    <div id="error-banner" class="banner banner-error hidden"></div>
+    <div id="loading" class="hidden">Loading…</div>
+
+    <table id="results-table" class="hidden">
+      <thead>
+        <tr>
+          <th>Fiscal Year</th>
+          <th>Budget Authority</th>
+          <th>Obligated</th>
+          <th>Spent %</th>
+          <th>Real Growth (vs. inflation)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p id="empty-state">Select an agency above to see its budget history.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
