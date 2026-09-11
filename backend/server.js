@@ -42,6 +42,8 @@ app.get("/api/agency/:code/budget-vs-inflation", async (req, res) => {
     res.status(503).json({ error: err.message });
   }
 });
-
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
