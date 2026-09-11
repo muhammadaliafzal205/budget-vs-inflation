@@ -71,10 +71,12 @@ first fetch, so this mostly matters during initial development, not normal use.
 
 ```
 backend/
-  server.js       — Express app, two endpoints
-  usaspending.js  — USAspending fetch, retry/backoff, cache fallback
-  bls.js          — BLS CPI fetch, cached indefinitely per year range
-  cache.js         — shared disk-cache helper
+  server.js      — Express app, two endpoints
+  usaspending.js — USAspending fetch, retry/backoff, cache fallback
+  bls.js         — BLS CPI fetch, cached indefinitely per year range
+  cache.js       — shared disk-cache helper
 frontend/
   index.html, app.js, styles.css — no build step, no framework
 ```
+## Author
+Built by [Muhammad Ali](https://github.com/muhammadaliafzal205)
