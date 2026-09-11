@@ -1,5 +1,6 @@
-// cache.js — tiny disk cache. No DB, no Redis: just JSON files.
-// Good enough for a handful of agencies/series that change once a day at most.
+   // Shared disk-cache helper used by usaspending.js and bls.js
+   // Reads/writes cached JSON to avoid repeat API calls and
+   // provides fallback data when a live fetch fails.
 
 const fs = require("fs");
 const path = require("path");
